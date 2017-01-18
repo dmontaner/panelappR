@@ -75,7 +75,8 @@ install.packages ("pkg", lib = "local", repos = NULL, INSTALL_opts = "--html")
 
 
 ### Build the package
-build (pkg = "pkg", manual = TRUE, vignettes = TRUE)
+##build (pkg = "pkg", manual = TRUE, vignettes = TRUE)
+build (pkg = "pkg", manual = TRUE, vignettes = FALSE)
 
 
 ###EXIT
