@@ -1,0 +1,25 @@
+Package: panelappR
+Title: What the Package Does (one line, title case)
+Version: 0.0.0
+Authors@R: person ("David", "Montaner", email = "david.montaner@gmail.com", role = c ("aut", "cre"))
+Description: What the package does (one paragraph).
+Depends:
+    R (>= 3.3.2)
+Imports:
+    utils,
+    jsonlite,
+    biomaRt,
+    openxlsx
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Date: 2017-01-17
+URL: http://www.dmontaner.com/, https://github.com/dmontaner/panelappR
+BugReports: https://github.com/dmontaner/panelappR/issues
+Suggests:
+    BiocStyle,
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 5.0.1
