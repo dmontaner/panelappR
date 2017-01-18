@@ -47,7 +47,7 @@ library (panelappR)
 
 Download the data
 
-```{r, results = 'hidde'}
+```{r, results = 'hide'}
 pad <- paDownload ()
 ```
 
@@ -69,7 +69,7 @@ lapply (pad, head)
 
 Annotate the genes using the latest Ensembl information.
 
-```{r, results = 'hidde'}
+```{r, results = 'hide', warning = FALSE}
 pad <- paAnnotate (pad)
 ```
 
