@@ -4,7 +4,7 @@ Version: 0.0.0
 Authors@R: person ("David", "Montaner", email = "david.montaner@gmail.com", role = c ("aut", "cre"))
 Description: What the package does (one paragraph).
 Depends:
-    R (>= 3.3.2)
+    R (>= 3.0.0)
 Imports:
     utils,
     jsonlite,
