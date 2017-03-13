@@ -11,10 +11,10 @@ Install
 
 You can install the library doing:
 
+    install.packages ("devtools")
     library (devtools)
+    setRepositories (ind=1:2)
     install_github ("dmontaner/panelappR/pkg")
-
-
 
 
 Usage
@@ -54,11 +54,11 @@ lapply (pad, head)
 ```
 ## $panels
 ##                   Panel_Id CurrentVersion Number_of_Genes
-## 1 553f9596bb5a1616e5ed45aa            1.1               2
+## 1 553f9596bb5a1616e5ed45aa            1.2               2
 ## 2 55d30b0322c1fc2ff2a5bf7b            1.3              29
-## 3 5790c2be8f62032bd2afefea           0.15             202
+## 3 5790c2be8f62032bd2afefea           0.18             202
 ## 4 553f97abbb5a1616e5ed45f9            1.2              53
-## 5 553f9595bb5a1616e5ed45a8            1.8              25
+## 5 553f9595bb5a1616e5ed45a8            1.9              25
 ## 6 55a3876e22c1fc63fec6d0da            1.1              15
 ##                                           Panel_Name
 ## 1                                    Agranulocytosis
@@ -215,4 +215,6 @@ Export into an `xlsx` file:
 ```r
 paExport.xlsx (pad, file = "panelap_data.xlsx")
 ```
+
+
 

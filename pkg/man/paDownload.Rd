@@ -23,4 +23,3 @@ a list of data.frames with the following information
 \description{
 The function downloads PanelApp latest version  information
 }
-

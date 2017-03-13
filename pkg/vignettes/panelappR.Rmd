@@ -29,10 +29,10 @@ Install
 
 You can install the library doing:
 
+    install.packages ("devtools")
     library (devtools)
+    setRepositories (ind=1:2)
     install_github ("dmontaner/panelappR/pkg")
-
-
 
 
 Usage
@@ -87,6 +87,10 @@ the version in which PanelApp was firstly developed.
 Export into an `xlsx` file:
 
 ```{r}
+paExport.xlsx (pad, file = "panelap_data.xlsx")
+```
+
+```{r, echo = FALSE, results = 'hide'}
 paExport.xlsx (pad, file = "panelap_data.xlsx")
 ```
 

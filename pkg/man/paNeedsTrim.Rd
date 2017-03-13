@@ -15,4 +15,3 @@ a list of data frames
 \description{
 The function creates a list of data frames keeping the rows which need some trimming.
 }
-

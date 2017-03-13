@@ -7,9 +7,9 @@
 paExport.xlsx(pad, file)
 }
 \arguments{
-\item{pad}{PanelApp data exported using funciton paDownload.}
+\item{pad}{PanelApp data exported using function paDownload.}
 
-\item{file}{xls or xlsx file name (the extension has to be included).}
+\item{file}{xls or xlsx file name (the file extension has to be included).}
 }
 \value{
 an xmlx file.
@@ -17,4 +17,7 @@ an xmlx file.
 \description{
 The function saves PanelApp data into an xlsx file using the "openxlsx" library.
 }
-
+\details{
+Tables "publications" and "phenotypes" are NOT into the xlsx format
+because they contain end of lines and tabs which break the xlsx file.
+}

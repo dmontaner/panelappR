@@ -2,9 +2,13 @@
 
 export(paAnnotate)
 export(paDownload)
+export(paExport.sqlite)
 export(paExport.xlsx)
+export(paGenPanMat)
 export(paNeedsTrim)
+import(RSQLite)
 import(biomaRt)
 import(jsonlite)
 import(openxlsx)
+import(reshape)
 import(utils)
