@@ -4,10 +4,13 @@
 \alias{paDownload}
 \title{Download PanelApp information}
 \usage{
-paDownload(verbose = TRUE)
+paDownload(verbose = TRUE,
+  URL = "https://panelapp.extge.co.uk/crowdsourcing/WebServices")
 }
 \arguments{
 \item{verbose}{verbose.}
+
+\item{URL}{Catalog web services base url.}
 }
 \value{
 a list of data.frames with the following information

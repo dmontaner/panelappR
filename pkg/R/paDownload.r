@@ -6,6 +6,7 @@
 ##'
 ##' The function downloads PanelApp latest version  information
 ##'
+##' @param URL Catalog web services base url.
 ##' @param verbose verbose.
 ##'
 ##' @return a list of data.frames with the following information
@@ -21,10 +22,13 @@
 ##' @import utils jsonlite
 ##' @export
 
-paDownload <- function (verbose = TRUE) {
+paDownload <- function (verbose = TRUE, URL = "https://panelapp.extge.co.uk/crowdsourcing/WebServices") {
 
+    ## url
+    gsub ("https")
+    
     ## ### PANELS
-    pa.url <- "https://bioinfo.extge.co.uk/crowdsourcing/WebServices/list_panels?format=json"
+    pa.url <- paste0 (URL, "/list_panels?format=json")
     panels <- fromJSON (txt = pa.url)
     panels <- panels[["result"]]
     names (panels)[names (panels) == "Name"] <- "Panel_Name"
@@ -53,7 +57,7 @@ paDownload <- function (verbose = TRUE) {
     ## #########################################################################
     
     ## ### GENES
-    base <- "https://bioinfo.extge.co.uk/crowdsourcing/WebServices/get_panel/"
+    base <- paste0 (URL, "/get_panel/")
     formato <- "/?format=json"
     
     genes <- NULL
