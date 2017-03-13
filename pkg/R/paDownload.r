@@ -23,9 +23,6 @@
 ##' @export
 
 paDownload <- function (verbose = TRUE, URL = "https://panelapp.extge.co.uk/crowdsourcing/WebServices") {
-
-    ## url
-    gsub ("https")
     
     ## ### PANELS
     pa.url <- paste0 (URL, "/list_panels?format=json")
