@@ -1,26 +1,26 @@
 ---
 title: "panelappR"
 author: "[David Montaner](http://www.dmontaner.com)"
-date: "`r Sys.Date()`"
+date: "Created: 2017-01-18 | Revised: 2017-03-13 | Compiled: `r Sys.Date()`"
 output:
   BiocStyle::html_document:
     toc: no
     fig_width: 5
     fig_height: 5
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{panelappR intro}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 ```{r style, echo = FALSE, results = 'asis'}
 BiocStyle::markdown()
+options (width = 80)
 ```
 
 `panelappR` is an R library to download
 [PanelApp](https://panelapp.extge.co.uk)
 data.
-
 
 
 
@@ -41,14 +41,13 @@ Usage
 Load the package
 
 ```{r}
-library (panelappR)
+library(panelappR)
 ```
-
 
 Download the data
 
 ```{r, results = 'hide'}
-pad <- paDownload ()
+pad <- paDownload()
 ```
 
 `pad` is a list containing the following data frames:
@@ -63,20 +62,20 @@ pad <- paDownload ()
 
 
 ```{r}
-lapply (pad, head)
+names(pad)
+head(pad$genes)
 ```
-
 
 Annotate the genes using the latest Ensembl information.
 
 ```{r, results = 'hide', warning = FALSE}
-pad <- paAnnotate (pad)
+pad <- paAnnotate(pad)
 ```
 
 The the Ensembl information is now incorporated  in new columns of the data.frame `pad$ensembl`
 
 ```{r}
-head (pad$ensembl)
+head(pad$ensembl)
 ```
 
 Use `append = FALSE` if you want to get the information in an independent data.frame.
@@ -87,10 +86,16 @@ the version in which PanelApp was firstly developed.
 Export into an `xlsx` file:
 
 ```{r}
-paExport.xlsx (pad, file = "panelap_data.xlsx")
+paExport.xlsx(pad, file = "panelap_data.xlsx")
+```
+
+Export into an `SQLite` file:
+
+```{r}
+paExport.sqlite(pad, file = "panelap_data.sqlite")
 ```
 
 ```{r, echo = FALSE, results = 'hide'}
-paExport.xlsx (pad, file = "panelap_data.xlsx")
+unlink("panelap_data.xlsx")
+unlink("panelap_data.sqlite")
 ```
-
