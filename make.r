@@ -56,7 +56,7 @@ test (pkg = "pkg")
 ################################################################################
 
 ### Vignettes
-build_vignettes (pkg = "pkg")
+system.time (build_vignettes (pkg = "pkg"))
 
 ## md format for Github
 vignetas <- dir ("pkg/vignettes")
