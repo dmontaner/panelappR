@@ -58,17 +58,17 @@ test (pkg = "pkg")
 ### Vignettes
 system.time (build_vignettes (pkg = "pkg"))
 
-## md format for Github
-vignetas <- dir ("pkg/vignettes")
-for (vg in vignetas) {
-    vg.md <- sub ("Rmd$", "md", vg)
-    knit (input = file.path ("pkg", "vignettes", vg))
-    li <- readLines (vg.md)
-    ## li <- li[-(1:which (li == "</style>"))]
-    menos <- which (li == "---")[1:2]
-    li <- li[-(menos[1]:menos[2]) ]
-    writeLines (li, vg.md)
-}
+## ## md format for Github
+## vignetas <- dir ("pkg/vignettes")
+## for (vg in vignetas) {
+##     vg.md <- sub ("Rmd$", "md", vg)
+##     knit (input = file.path ("pkg", "vignettes", vg))
+##     li <- readLines (vg.md)
+##     ## li <- li[-(1:which (li == "</style>"))]
+##     menos <- which (li == "---")[1:2]
+##     li <- li[-(menos[1]:menos[2]) ]
+##     writeLines (li, vg.md)
+## }
 
 ################################################################################
 
