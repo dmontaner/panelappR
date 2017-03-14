@@ -18,4 +18,4 @@ Install
 Vignette
 --------------------------------------------------------------------------------
 
-- [panelappR.md](panelappR.md)
+- [panelappR_intro.html](http://www.dmontaner.com/tabdif/pkg/inst/doc/panelappR_intro.html)
