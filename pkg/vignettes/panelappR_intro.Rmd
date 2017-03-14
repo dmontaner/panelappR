@@ -20,6 +20,9 @@ BiocStyle::markdown()
 options (width = 80)
 ```
 
+\  
+
+
 `panelappR` is an R library to download
 [PanelApp](https://panelapp.extge.co.uk)
 data.
