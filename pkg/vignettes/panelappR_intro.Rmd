@@ -91,7 +91,7 @@ paExport.xlsx(pad, file = "panelap_data.xlsx")
 
 Export into an `SQLite` file:
 
-```{r}
+```{r, results = 'hide'}
 paExport.sqlite(pad, file = "panelap_data.sqlite")
 ```
 
