@@ -5,4 +5,5 @@ before_install:
   - cd pkg
 env:
   global:
-    - R_CHECK_ARGS="--no-vignettes"
+    - r_build_args: --no-build-vignettes
+    - r_check_args: --no-build-vignettes
