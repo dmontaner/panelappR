@@ -1,6 +1,6 @@
 Package: panelappR
 Title: What the Package Does (one line, title case)
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: person ("David", "Montaner", email = "david.montaner@gmail.com", role = c ("aut", "cre"))
 Description: What the package does (one paragraph).
 Depends:

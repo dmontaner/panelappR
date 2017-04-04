@@ -68,6 +68,10 @@ paAnnotate <- function (pad, append = TRUE, latestVersion = TRUE, verbose = TRUE
     
     ## format results
     if (append) {
+        ## clean annotation columns if they are there
+        to.wipe <- setdiff (colnames (annot), "EnsembleGeneIds")
+        pad$ensembl <- pad$ensembl[,!colnames (pad$ensembl) %in% to.wipe]
+        ##
         mer <- merge (pad$ensembl, annot, all = TRUE)
         orden <- order (mer[,"GeneSymbol"], mer[,"EnsembleGeneIds"])
         mer <- mer[orden,]

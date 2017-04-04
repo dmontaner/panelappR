@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <div id="header">
 <h1 class="title">panelappR</h1>
 <h4 class="author"><em><a href="http://www.dmontaner.com">David Montaner</a></em></h4>
-<h4 class="date"><em>Created: 2017-01-18 | Revised: 2017-03-13 | Compiled: 2017-03-14</em></h4>
+<h4 class="date"><em>Created: 2017-01-18 | Revised: 2017-03-13 | Compiled: 2017-04-04</em></h4>
 </div>
 
 
@@ -103,15 +103,22 @@ install_github (&quot;dmontaner/panelappR/pkg&quot;)</code></pre>
 ## 2                                    Agranulocytosis       TCN2
 ## 3 Amyotrophic lateral sclerosis/motor neuron disease       ALS2
 ## 4 Amyotrophic lateral sclerosis/motor neuron disease        ANG
-## 5 Amyotrophic lateral sclerosis/motor neuron disease      DCTN1
-## 6 Amyotrophic lateral sclerosis/motor neuron disease       FIG4
-##   LevelOfConfidence Penetrance ModeOfInheritance ModeOfPathogenicity
-## 1      HighEvidence   Complete         biallelic                &lt;NA&gt;
-## 2      HighEvidence   Complete         biallelic                &lt;NA&gt;
-## 3      HighEvidence   Complete         biallelic                &lt;NA&gt;
-## 4      HighEvidence   Complete       monoallelic                &lt;NA&gt;
-## 5      HighEvidence   Complete       monoallelic                &lt;NA&gt;
-## 6      HighEvidence   Complete       monoallelic                &lt;NA&gt;</code></pre>
+## 5 Amyotrophic lateral sclerosis/motor neuron disease         AR
+## 6 Amyotrophic lateral sclerosis/motor neuron disease      DCTN1
+##   LevelOfConfidence Penetrance ModeOfInheritance
+## 1      HighEvidence   Complete         biallelic
+## 2      HighEvidence   Complete         biallelic
+## 3      HighEvidence   Complete         biallelic
+## 4      HighEvidence   Complete       monoallelic
+## 5      HighEvidence   Complete xlinked_biallelic
+## 6      HighEvidence   Complete       monoallelic
+##                              ModeOfPathogenicity
+## 1                                           &lt;NA&gt;
+## 2                                           &lt;NA&gt;
+## 3                                           &lt;NA&gt;
+## 4                                           &lt;NA&gt;
+## 5 Other - please provide details in the comments
+## 6                                           &lt;NA&gt;</code></pre>
 <p>Annotate the genes using the latest Ensembl information.</p>
 <pre class="r"><code>pad &lt;- paAnnotate(pad)</code></pre>
 <p>The the Ensembl information is now incorporated in new columns of the data.frame <code>pad$ensembl</code></p>
