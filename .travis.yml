@@ -3,7 +3,5 @@ r: bioc-release
 cache: packages
 before_install:
   - cd pkg
-env:
-  global:
-    - r_build_args: --no-build-vignettes
-    - r_check_args: --no-build-vignettes
+r_build_args: --no-build-vignettes
+r_check_args: --no-build-vignettes
