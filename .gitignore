@@ -36,3 +36,4 @@ check/*
 local/*
 sandbox/*
 *.tar.gz
+/spin
