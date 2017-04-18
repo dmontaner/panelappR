@@ -2,7 +2,7 @@
 % Please edit documentation in R/paNeedsTrim.r
 \name{paNeedsTrim}
 \alias{paNeedsTrim}
-\title{Find data which need trimming}
+\title{Find rows which need trimming}
 \usage{
 paNeedsTrim(pad)
 }
@@ -10,8 +10,18 @@ paNeedsTrim(pad)
 \item{pad}{PanelApp data exported using funciton paDownload.}
 }
 \value{
-a list of data frames
+A list of data frames with the same items as in the `pad` and filtered rows.
 }
 \description{
-The function creates a list of data frames keeping the rows which need some trimming.
+The function filters the rows in the data frames downloaded from Panelapp.
+For each data frame, it keeps just those rows which need white trimming
+in any of their columns.
+}
+\details{
+The columns in the data frames in the out put list are all converted to text.
+Moreover, all values in the output are wrapped withing double quotes
+so that the white spaces are easy to spot.
+
+By default "needs trimming" means that whites apear at the beggining
+and at the end of the character values.
 }

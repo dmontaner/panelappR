@@ -2,14 +2,27 @@
 ##2016-12-05 david.montaner@genomicsengland.co.uk
 ##Convert text columns into a quoted ones
 
-##' Find data which need trimming
+##' Find rows which need trimming
 ##'
-##' The function creates a list of data frames keeping the rows which need some trimming.
+##' The function filters the rows in the data frames downloaded from Panelapp.
+##' For each data frame, it keeps just those rows which need white trimming
+##' in any of their columns.
 ##'
+##' The columns in the data frames in the out put list are all converted to text.
+##' Moreover, all values in the output are wrapped withing double quotes
+##' so that the white spaces are easy to spot.
+##'
+##' By default "needs trimming" means that whites apear at the beggining
+##' and at the end of the character values. 
+##' 
 ##' @param pad PanelApp data exported using funciton paDownload.
 ##'
-##' @return a list of data frames
+##' @return A list of data frames with the same items as in the `pad` and filtered rows.
 ##' @export
+
+
+## ToDo:
+## internal Whites : use gsub (" +", " ", "uno    dos")
 
 paNeedsTrim <- function (pad) {
     

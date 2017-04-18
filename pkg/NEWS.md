@@ -1,4 +1,7 @@
 
+# panelappR 0.0.3
+
+- Conversion functions implemented: `paAlias2Name` and `paName2CurrentVersion`.
 
 # panelappR 0.0.2
 
