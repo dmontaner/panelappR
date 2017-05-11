@@ -15,7 +15,8 @@ Install
     install_github ("dmontaner/panelappR/pkg")
 
 
-Vignette
+Docs
 --------------------------------------------------------------------------------
 
-- [panelappR_intro.html](http://www.dmontaner.com/panelappR/pkg/inst/doc/panelappR_intro.html)
+- Vignette: [panelappR_intro.html](http://www.dmontaner.com/panelappR/pkg/inst/doc/panelappR_intro.html)
+-  Wiki: https://github.com/dmontaner/panelappR/wiki
